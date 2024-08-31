@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
+        if(!PlayerManager.levelStarted) return; 
+
         transform.Translate(0, 0, speed * Time.deltaTime);
         if (Touchscreen.current != null)
         {
