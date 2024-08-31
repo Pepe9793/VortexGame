@@ -11,4 +11,13 @@ public class PlayerCollision : MonoBehaviour
             PlayerManager.gameOver = true;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("gem"))
+        {
+            PlayerManager.gems++;
+            Destroy(other.gameObject); 
+        }
+    }
 }
