@@ -8,15 +8,11 @@ public class PlayerController : MonoBehaviour
     public float speed = 2.5f;
     public float rotationSpeed = 1.0f;
     
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {
         if(!PlayerManager.levelStarted) return; 
+        if(PlayerManager.gameOver) return; 
 
         transform.Translate(0, 0, speed * Time.deltaTime);
         if (Touchscreen.current != null)
