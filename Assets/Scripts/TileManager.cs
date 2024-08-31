@@ -52,10 +52,12 @@ public class TileManager : MonoBehaviour
         activeTiles.Add(tile);
         zSpawn += tileLength;
         previousIndex = index;
+        
     }
 
     private void DeleteTile()
     {
+        PlayerManager.score += 2;
         Destroy(activeTiles[0]);
         activeTiles.RemoveAt(0);
     }
