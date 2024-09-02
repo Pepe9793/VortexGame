@@ -45,12 +45,12 @@ public class PlayerManager : MonoBehaviour
             gameOverPanel.SetActive(true);
             PlayerPrefs.SetInt("TotalGems", PlayerPrefs.GetInt("TotalGems", 0) + gems);
 
-            if (score > PlayerPrefs.GetInt("HighScore",0))
-            {
-                highScoreText.text = "HighScore" + score;
+            //if (score > PlayerPrefs.GetInt("HighScore",0))
+            //{
+            //    highScoreText.text = "HighScore" + score;
 
-                PlayerPrefs.SetInt("HighScore: ",score);
-            }
+            //    PlayerPrefs.SetInt("HighScore: ",score);
+            //}
 
             this.enabled = false;
         }
